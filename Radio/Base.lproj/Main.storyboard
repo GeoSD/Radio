@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="loC-pu-E2v">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Station Table View Controller-->
+        <scene sceneID="UsS-9r-Eby">
+            <objects>
+                <tableViewController id="qf9-YL-Qgw" customClass="StationTableViewController" customModule="Radio" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kUt-Tt-QMd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationCell" rowHeight="60" id="dBK-6A-cbw" customClass="StationTableViewCell" customModule="Radio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dBK-6A-cbw" id="jI6-h8-too">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s4c-aY-gU1">
+                                            <rect key="frame" x="8" y="1" width="58" height="58"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="58" id="6ra-4D-t0b"/>
+                                                <constraint firstAttribute="width" secondItem="s4c-aY-gU1" secondAttribute="height" multiplier="1:1" id="wqa-Ns-X2L"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StationName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lud-9a-QEJ">
+                                            <rect key="frame" x="74" y="1" width="238" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="iIz-4z-cap">
+                                            <rect key="frame" x="74" y="27" width="222" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="s4c-aY-gU1" firstAttribute="leading" secondItem="jI6-h8-too" secondAttribute="leading" constant="8" id="0Gr-KR-zbp"/>
+                                        <constraint firstItem="Lud-9a-QEJ" firstAttribute="top" secondItem="jI6-h8-too" secondAttribute="top" constant="1" id="7Sq-ZJ-GHF"/>
+                                        <constraint firstItem="iIz-4z-cap" firstAttribute="top" secondItem="Lud-9a-QEJ" secondAttribute="bottom" constant="2" id="OOx-JS-T30"/>
+                                        <constraint firstItem="iIz-4z-cap" firstAttribute="leading" secondItem="s4c-aY-gU1" secondAttribute="trailing" constant="8" id="aXA-8U-Cpr"/>
+                                        <constraint firstItem="s4c-aY-gU1" firstAttribute="centerY" secondItem="jI6-h8-too" secondAttribute="centerY" id="bW3-s0-zuO"/>
+                                        <constraint firstItem="Lud-9a-QEJ" firstAttribute="leading" secondItem="s4c-aY-gU1" secondAttribute="trailing" constant="8" id="dpA-Is-TX9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iIz-4z-cap" secondAttribute="trailing" constant="8" id="lDI-VN-inp"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lud-9a-QEJ" secondAttribute="trailing" constant="8" id="tKp-0U-NAN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <viewLayoutGuide key="safeArea" id="qg3-YW-SFC"/>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="iIz-4z-cap" id="m1P-Lo-AUZ"/>
+                                    <outlet property="stationImage" destination="s4c-aY-gU1" id="Edq-Y7-bPJ"/>
+                                    <outlet property="stationNameLabel" destination="Lud-9a-QEJ" id="3zX-Zm-BS9"/>
+                                    <segue destination="I33-EH-Bmu" kind="show" identifier="StationView" id="lDn-YE-vm6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qf9-YL-Qgw" id="YYb-xS-xXU"/>
+                            <outlet property="delegate" destination="qf9-YL-Qgw" id="WOF-H9-YHK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="17R-aN-EJ4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILV-Rg-66L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.125" y="144.71830985915494"/>
+        </scene>
+        <!--Station View Controller-->
+        <scene sceneID="Nb3-sb-hcr">
+            <objects>
+                <viewController id="I33-EH-Bmu" customClass="StationViewController" customModule="Radio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rV2-tL-sEu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zFr-eo-gAQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZ5-IF-mGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7kT-LV-vsZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="loC-pu-E2v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nzz-r2-2gB">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qf9-YL-Qgw" kind="relationship" relationship="rootViewController" id="wDG-Py-8rF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPn-16-Mwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="145"/>
+        </scene>
+    </scenes>
+</document>
